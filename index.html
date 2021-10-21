@@ -1,7 +1,31 @@
 <html>
-
 <head>
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script>
+    function ticker(ticker) {
+      new TradingView.widget(
+        {
+          "width": 600,
+          "height": 500,
+          "symbol": ticker,
+          "interval": "W",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "2",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "range": "3M",
+          "details": true,
+          "allow_symbol_change": true,
+          "studies":["StochasticRSI@tv-basicstudies",
+                      "RSI@tv-basicstudies"
+                    ],
+          "container_id": ticker.split(":")[1]
+        }
+      );
+    }
+  </script>
   <style>
     .box {
       display: flex;
@@ -10,109 +34,31 @@
   </style>
 </head>
 <body>
-<div class="box">
-  <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div id="SHOP"></div>
-    <script type="text/javascript">
-      new TradingView.widget(
-        {
-          "width": 750,
-          "height": 500,
-          "symbol": "NYSE:SHOP",
-          "interval": "D",
-          "timezone": "Etc/UTC",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "toolbar_bg": "#f1f3f6",
-          "enable_publishing": false,
-          "range":"12M",
-          "details":true,
-          "allow_symbol_change": true,
-          "container_id": "SHOP"
-        }
-      );
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-  <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div id="ASAN"></div>
-    <script type="text/javascript">
-      new TradingView.widget(
-        {
-          "width": 750,
-          "height": 500,
-          "symbol": "NYSE:ASAN",
-          "interval": "D",
-          "timezone": "Etc/UTC",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "toolbar_bg": "#f1f3f6",
-          "enable_publishing": false,
-          "range":"12M",
-          "details":true,
-          "allow_symbol_change": true,
-          "container_id": "ASAN"
-        }
-      );
-    </script>
-  </div>
-<!-- TradingView Widget END -->
-
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="SNOW"></div>
-  <script type="text/javascript">
-    new TradingView.widget(
-      {
-        "width": 750,
-        "height": 500,
-        "symbol": "NYSE:SNOW",
-        "interval": "D",
-        "timezone": "Etc/UTC",
-        "theme": "dark",
-        "style": "1",
-        "locale": "en",
-        "toolbar_bg": "#f1f3f6",
-        "enable_publishing": false,
-        "range":"12M",
-        "details":true,
-        "allow_symbol_change": true,
-        "container_id": "SNOW"
-      }
-    );
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="INTU"></div>
-  <script type="text/javascript">
-    new TradingView.widget(
-      {
-        "width": 750,
-        "height": 500,
-        "symbol": "NASDAQ:INTU",
-        "interval": "D",
-        "timezone": "Etc/UTC",
-        "theme": "dark",
-        "style": "1",
-        "locale": "en",
-        "toolbar_bg": "#f1f3f6",
-        "enable_publishing": false,
-        "range":"12M",
-        "details":true,
-        "allow_symbol_change": true,
-        "container_id": "INTU"
-      }
-    );
-  </script>
-</div>
-<!-- TradingView Widget END -->
+  <div class="box">
+      <script>ticker("NASDAQ:ADBE")</script>
+      <script>ticker("NASDAQ:AIMC")</script>
+      <script>ticker("NASDAQ:AMZN")</script>
+      <script>ticker("NYSE:ASAN")</script>
+      <script>ticker("NASDAQ:DOCU")</script>
+      <script>ticker("NASDAQ:FB")</script>
+      <script>ticker("NYSE:GDDY")</script>
+      <script>ticker("NASDAQ:GOOGL")</script>
+      <script>ticker("NYSE:IAA")</script>
+      <script>ticker("NASDAQ:INTU")</script>
+      <script>ticker("NASDAQ:LRCX")</script>
+      <script>ticker("NYSE:M")</script>
+      <script>ticker("NASDAQ:OKTA")</script>
+      <script>ticker("NASDAQ:RNLX")</script>
+      <script>ticker("NYSE:SHOP")</script>
+      <script>ticker("NYSE:SNOW")</script>
+      <script>ticker("NASDAQ:TSLA")</script>
+      <script>ticker("NASDAQ:TTD")</script>
+      <script>ticker("NASDAQ:ULTA")</script>
+      <script>ticker("NASDAQ:UPST")</script>
+      <script>ticker("NASDAQ:ZBRA")</script>
+      <script>ticker("NASDAQ:ZM")</script>
+      <script>ticker("NASDAQ:ZNGA")</script>
+      <script>ticker("NASDAQ:ZS")</script>
 
 </div>
 
